@@ -19,6 +19,11 @@ This is the code for my Udacity Robotics Software Engineer Nanodegree  - Where A
     │   ├── my_robot.xacro             # main URDF file
     ├── world                          # Gazebo main World containing models
     │   ├── myworld.world              # The main world file
+    ├── config                         # It contains config files have a preset of parameters defined for you to navigate the robot if you choose to send navigation goal to the robot in testing
+    │   ├── base_local_planner_params.yaml
+    │   ├── costmap_common_params.yaml
+    │   ├── global_costmap_params.yaml
+    │   ├── local_costmap_params.yaml
     ├── udacity_bot.rviz               # the rviz configuration file
     └── README.md
 ```
