@@ -19,8 +19,6 @@ This is the code for my Udacity Robotics Software Engineer Nanodegree  - Where A
     │   ├── my_robot.xacro             # main URDF file
     ├── world                          # Gazebo main World containing models
     │   ├── myworld.world              # The main world file
-    ├── CMakeLists.txt
-    ├── package.xml                    # the ROS package file created by catkin_create_pkg
     ├── udacity_bot.rviz               # the rviz configuration file
     └── README.md
 ```
