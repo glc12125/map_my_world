@@ -29,15 +29,19 @@ This is the code for my Udacity Robotics Software Engineer Nanodegree  - Where A
 
 #### Clone the project folder in /home/workspace/
 ```sh
-$ cd ${your_catkin_ws}/src
-$ git clone git@github.com:glc12125/udacity_bot.git
+$ cd /home/workspace/
+$ git clone https://github.com/glc12125/udacity_bot.git
 ```
 
 #### Compile the code
 ```sh
+create a package in your catkin workspace to host udacity_bot with the same name 
+$ cd ${your_catkin_ws}/src
+$ catkin_create_pkg udacity_bot
+$ cp -r /home/workspace/udacity_bot/* ${your_catkin_ws}/src/udacity_bot/
 $ cd ${your_catkin_ws}
 $ catkin_make
-$ source devel setup.bash
+$ source devel/setup.bash
 ```
 
 #### Launch Gazebo world and services  
