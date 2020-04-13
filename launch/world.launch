@@ -11,10 +11,10 @@
   <arg name="yaw" default="-2.878125"/>
 
   <!-- Launch other relevant files-->
-  <include file="$(find udacity_bot)/launch/robot_description.launch"/>
+  <include file="$(find map_my_world)/launch/robot_description.launch"/>
 
   <!-- World File -->
-  <arg name="world_file" default="$(find udacity_bot)/world/myworld.world"/>
+  <arg name="world_file" default="$(find map_my_world)/world/myworld.world"/>
 
   <!-- Launch Gazebo World -->
   <include file="$(find gazebo_ros)/launch/empty_world.launch">
@@ -25,7 +25,7 @@
   </include>
 
   <!-- Find my robot Description-->
-  <param name="robot_description" command="$(find xacro)/xacro --inorder '$(find udacity_bot)/urdf/my_robot.xacro'"/>
+  <param name="robot_description" command="$(find xacro)/xacro --inorder '$(find map_my_world)/urdf/my_robot.xacro'"/>
 
   <!-- Spawn My Robot -->
   <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen" 
@@ -34,5 +34,5 @@
               -R $(arg roll) -P $(arg pitch) -Y $(arg yaw)"/>
 
   <!--launch rviz-->
-  <node name="rviz" pkg="rviz" type="rviz" respawn="false" args="-d '$(find udacity_bot)/udacity_bot.rviz'"/>
+  <node name="rviz" pkg="rviz" type="rviz" respawn="false" args="-d '$(find map_my_world)/map_my_world.rviz'"/>
 </launch>
